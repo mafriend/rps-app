@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<script language="javaScript">
+//actual javascript
+  var userChoice = prompt("Do you choose rock, paper or scissors?").toLowerCase();
+  var computerChoice = Math.random();
+    if (computerChoice < 0.34) {
+      computerChoice = "rock";
+    } else if(computerChoice <= 0.67) {
+      computerChoice = "paper";
+    } else {
+      computerChoice = "scissors";
+    }
+
+//compare choices
+var compare = function(choice1, choice2) {
+  if(choice1 === choice2) {
+    return "It's a tie!";
+  }
+
+  if(choice1 === "rock") {
+  if(choice2 === "scissors") {
+     return "Rock wins!";
+    }
+  else {
+     return "Paper wins!";
+    }
+  }
+
+  if(choice1 === "paper") {
+  if(choice2 === "scissors") {
+     return "Paper wins!";
+    }
+  else if(choice2 === rock) {
+     return "Rock wins!";
+    }
+  }
+
+  if(choice1 === "scissors") {
+  if(choice2 === "paper") {
+     return "Scissors wins!";
+    }
+  else if(choice2 === "rock") {
+     return "Rock wins!";
+    }
+  }
+
+  if(choice1 !== "rock", "paper", "scissors") {
+     return "You have to enter rock, paper, or scissors.";
+  }
+};
+
+//response
+alert(compare(userChoice, computerChoice));
+
+/*ask about:
+
+var play=prompt("Play again? Yes or No?");
+var playAgain = function(choice){
+  if(choice==="Yes"){
+    var userChoice = prompt("Do you choose rock, paper or scissors?");
+    compare (userChoice,computerChoice);
+  }
+
+  else{
+    alert("Good. Quit while you're ahead.");
+  }
+};
+
+playAgain(play);
+};
+
+*/
+
+</script>
+</head>
+<body>
+
+<h1>Rock, Paper, Scissors - Brought to you with the help of <a href="http://www.codecademy.com/">codecademy.com</a></h1>
+
+<h3>Elliot, hit the "command" key and the "R" key to play again.</h3>
+
+
+</body>
+</html>
